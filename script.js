@@ -32,9 +32,9 @@ const init = function () {
   current0El.textContent = 0;
   current1El.textContent = 0;
   let a = prompt("Player 1...Enter Your name");
-player0El.textContent = a;
-let b = prompt("Player 2...Enter Your name");
-player1El.textContent = b;
+  player0name.textContent = a;
+  let b = prompt("Player 2...Enter Your name");
+  player1name.textContent = b;
 
   diceEl.classList.add('hidden');
   player0El.classList.remove('player--winner');
