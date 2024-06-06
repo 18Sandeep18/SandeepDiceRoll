@@ -100,7 +100,7 @@ btnHold.addEventListener('click', function () {
       .querySelector(`.player--${activePlayer}`)
       .classList.remove('player--active');
       if(activePlayer == 0){
-        player1name.textContent = "Hurrayyy\n"+ a+"🎉🎉🎉";
+        player1name.textContent = "Hurrayyy\n"+a+"🎉🎉🎉";
       }
       else{
         player2name.textContent = "Hurrayyy\n"+b+"🎉🎉🎉";
