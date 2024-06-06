@@ -3,6 +3,8 @@
 // Selecting elements
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
+const player1name = document.getElementById('#name--0);
+const player2name = document.getElementById('#name--1);
 const score0El = document.querySelector('#score--0');
 const score1El = document.getElementById('score--1');
 const current0El = document.getElementById('current--0');
@@ -81,6 +83,12 @@ btnHold.addEventListener('click', function () {
       // Finish the game
       playing = false;
       diceEl.classList.add('hidden');
+      if(activePlayer == 0){
+        document.getElementById('#name--0').textContent = "Congratulations Player 1🎉🎉🎉");
+      }
+      else{
+        document.getElementById('#name--1').textContent = "Congratulations Player 2🎉🎉🎉");
+      }
 
       document
         .querySelector(`.player--${activePlayer}`)
