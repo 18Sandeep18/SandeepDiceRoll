@@ -15,7 +15,7 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
-
+alert("Hello");
 let a = prompt("Player 1...Enter Your name");
 player0El.textContent = a;
 let b = prompt("Player 2...Enter Your name");
