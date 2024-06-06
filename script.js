@@ -16,9 +16,9 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-let a = promt("Player 1...Enter Your name");
+let a = prompt("Player 1...Enter Your name");
 player0El.textContent = a;
-let b = promt("Player 2...Enter Your name");
+let b = prompt("Player 2...Enter Your name");
 player1El.textContent = b;
 
 let scores, currentScore, activePlayer, playing;
