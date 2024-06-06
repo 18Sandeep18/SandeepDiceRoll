@@ -15,11 +15,8 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
-alert("Hello");
-let a = prompt("Player 1...Enter Your name");
-player0El.textContent = a;
-let b = prompt("Player 2...Enter Your name");
-player1El.textContent = b;
+
+
 
 let scores, currentScore, activePlayer, playing;
 
@@ -34,8 +31,10 @@ const init = function () {
   score1El.textContent = 0;
   current0El.textContent = 0;
   current1El.textContent = 0;
-  player1name.textContent = "Player 1";
-  player2name.textContent = "Player 2";
+  let a = prompt("Player 1...Enter Your name");
+player0El.textContent = a;
+let b = prompt("Player 2...Enter Your name");
+player1El.textContent = b;
 
   diceEl.classList.add('hidden');
   player0El.classList.remove('player--winner');
