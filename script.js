@@ -19,6 +19,7 @@ const btnHold = document.querySelector('.btn--hold');
 
 
 let scores, currentScore, activePlayer, playing;
+let a,b;
 
 // Starting conditions
 const init = function () {
@@ -31,9 +32,9 @@ const init = function () {
   score1El.textContent = 0;
   current0El.textContent = 0;
   current1El.textContent = 0;
-  let a = prompt("Player 1...Enter Your name");
+   a = prompt("Player 1...Enter Your name");
   player1name.textContent = a;
-  let b = prompt("Player 2...Enter Your name");
+   b = prompt("Player 2...Enter Your name");
   player2name.textContent = b;
 
   diceEl.classList.add('hidden');
@@ -99,10 +100,10 @@ btnHold.addEventListener('click', function () {
       .querySelector(`.player--${activePlayer}`)
       .classList.remove('player--active');
       if(activePlayer == 0){
-        player1name.textContent = "Hurrayyy\n Player 1🎉🎉🎉";
+        player1name.textContent = "Hurrayyy\n a🎉🎉🎉";
       }
       else{
-        player2name.textContent = "Hurrayyy\n Player 2🎉🎉🎉";
+        player2name.textContent = "Hurrayyy\n b🎉🎉🎉";
       }
     } else {
       // Switch to the next player
