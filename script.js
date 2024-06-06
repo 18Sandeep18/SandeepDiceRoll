@@ -3,8 +3,9 @@
 // Selecting elements
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
-const player1name = document.getElementById('#name--0);
-const player2name = document.getElementById('#name--1);
+const player1name = document.querySelector('#name--0');
+const player2name = document.querySelector('#name--1');
+
 const score0El = document.querySelector('#score--0');
 const score1El = document.getElementById('score--1');
 const current0El = document.getElementById('current--0');
@@ -28,6 +29,8 @@ const init = function () {
   score1El.textContent = 0;
   current0El.textContent = 0;
   current1El.textContent = 0;
+  player1name.textContent = "Player 1";
+  player2name.textContent = "Player 2";
 
   diceEl.classList.add('hidden');
   player0El.classList.remove('player--winner');
@@ -79,23 +82,23 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 2) {
       // Finish the game
       playing = false;
       diceEl.classList.add('hidden');
+      
+      document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add('player--winner');
+      document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.remove('player--active');
       if(activePlayer == 0){
-        document.getElementById('#name--0').textContent = "Congratulations Player 1🎉🎉🎉");
+        player1name.textContent = "Hurrayyy\n Player 1🎉🎉🎉";
       }
       else{
-        document.getElementById('#name--1').textContent = "Congratulations Player 2🎉🎉🎉");
+        player2name.textContent = "Hurrayyy\n Player 2🎉🎉🎉";
       }
-
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.add('player--winner');
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.remove('player--active');
     } else {
       // Switch to the next player
       switchPlayer();
