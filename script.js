@@ -103,7 +103,7 @@ btnHold.addEventListener('click', function () {
         player1name.textContent = "Hurrayyy\n"+ a+"🎉🎉🎉";
       }
       else{
-        player2name.textContent = "Hurrayyy\n+ b+"🎉🎉🎉";
+        player2name.textContent = "Hurrayyy\n"+b+"🎉🎉🎉";
       }
     } else {
       // Switch to the next player
